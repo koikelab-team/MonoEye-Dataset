@@ -1,14 +1,9 @@
 import json
 from itertools import chain, product
 from string import ascii_lowercase
-try:
-    import wget
-except:
-    print("Please install the python wget package first!")
-    exit(1)
+import subprocess
 
 # cat test-set.* | tar xvzf -
-
 
 base_link = "https://github.com/koikelab-team/MonoEye-Dataset/releases/download/v1/"
 train_prefix = "train-set.part"
@@ -33,7 +28,9 @@ if __name__ == "__main__":
             part_name = "".join(combo)
             url = base_link + train_prefix + part_name
             print("Downloading " + train_prefix + part_name)
-            wget.download(url, out=download_path)
+            command = "wget " + url + " -P " + download_path + " -nc"
+            subprocess.call(command, shell=True)
+            #wget.download(url, out=download_path)
 
             if part_name == train_last_chunk:
                 print("Finish to download trainset.")
@@ -45,7 +42,9 @@ if __name__ == "__main__":
             part_name = "".join(combo)
             url = base_link + test_prefix + part_name
             print("Downloading " + test_prefix + part_name)
-            wget.download(url, out=download_path)
+            command = "wget " + url + " -P " + download_path + " -nc"
+            subprocess.call(command, shell=True)
+            #wget.download(url, out=download_path)
 
             if part_name == test_last_chunk:
                 print("Finish to download testset.")
