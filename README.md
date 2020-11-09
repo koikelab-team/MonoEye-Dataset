@@ -51,7 +51,7 @@ synthetic
 │   ├── camera
 ```
 ### Body
-In gt.csv for body pose, for each line, the joint information is structured as follos:
+In gt.csv for body pose, for each line, the joint information is structured as follows:
 ```
 x_2d_1, y_2d_1, x_2d_2, y_2d_2, ... x_2d_15, y_2d_15, x_3d_1, y_3d_1, z_3d_1, ..., x_3d_15, y_3d_15, z_3d_15
 ```
