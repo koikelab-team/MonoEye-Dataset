@@ -3,6 +3,7 @@
 This repository is for the dataset of ["MonoEye: Multimodal Human Motion Capture System Using A Single Ultra-Wide Fisheye Camera"](https://dl.acm.org/doi/abs/10.1145/3379337.3415856) (UIST 2020).
 
 ## Download Dataset [MacOS and Linux]
+You need around 600GB of storage to download the dataset contains compressed and decompressed files.
 Make sure wget is installed:
 ```
 # on Mac OS
@@ -61,9 +62,9 @@ pitch, yaw, roll
 ```
 
 ### Camera
-In gt.csv for camear pose, for each line, the rotation information is structured as follos (Ignore the roll data.):
+In gt.csv for camear pose, for each line, the rotation information is structured as follows (Please ignore the roll data.):
 ```
-pitch, yaw, roll
+pitch, yaw, roll(dummy)
 ```
 
 ### 
